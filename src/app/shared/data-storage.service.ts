@@ -16,8 +16,11 @@ export class DataStorageService{
     }
 
     fetchRecipes(){
-        this.http.get<Recipe[]>('https://ng-recipe-guide-11abb.firebaseio.com/recipes.json').subscribe(res => {
-            this.recipeService.setRecipes(res);
+        // this.http.get<Recipe[]>('https://ng-recipe-guide-11abb.firebaseio.com/recipes.json').subscribe(res => {
+            // this.http.get('baseurl/spring-crm-rest/api/customers').subscribe(res => {
+                this.http.get('http://localhost:8082/spring-crm-rest/api/customers', {observe: "response"}).subscribe(res => {
+                    console.log(res);
+            // this.recipeService.setRecipes(res);
         });
     }
 }

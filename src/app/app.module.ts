@@ -40,6 +40,7 @@ import { DataStorageService } from './shared/data-storage.service';
   ],
   imports: [
     BrowserModule,
+//	RouterModule.forRoot(appRoutes)	/* removed, because we are importing this content from AppRoutingModule via next line */
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
